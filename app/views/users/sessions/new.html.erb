@@ -28,12 +28,14 @@
 <p>ユーザー登録は<span><%=link_to"こちら", signup_path %></span></p>
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
+    <%= link_to "LINEログイン", "https://276c-119-228-248-115.jp.ngrok.io/users/auth/line" %>
+    <%
+=begin%>
+ <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br /> 
+<%
+=end%>
   <% end %>
 <% end %>
-
-
-
 
 </div>
 </div>
